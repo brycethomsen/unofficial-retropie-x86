@@ -19,13 +19,21 @@ apt-get install -y --no-install-recommends \
 
 apt-get install -y --no-install-recommends \
     network-manager \
-    net-tools wireless-tools \
+    net-tools \
+    wireless-tools \
     wpagui \
     curl \
     openssh-server \
-    ca-certificates xserver-xorg-core xserver-xorg xinit xterm sudo\
-    git dialog unzip xmlstarlet && \
+    ca-certificates \
+    xserver-xorg-core xserver-xorg xinit xterm xorg \
+    sudo \
+    git \
+    dialog \
+    unzip \
+    xmlstarlet && \
 apt-get clean
+# https://www.linuxquestions.org/questions/fedora-35/xf86enableioports-failed-to-set-iopl-for-i-o-520854/
+chmod u+s /usr/bin/xinit
 
 useradd -m retropie -s /bin/bash
 echo "retropie:retropie" | chpasswd
