@@ -12,7 +12,7 @@
     - ci
 
   before_install:
-    ./setup.sh
+    ./setup.sh > setup.log 2> /dev/null
 
   script:
-    - ./build.sh
+    - ./build.sh > build.log 2> /dev/null
