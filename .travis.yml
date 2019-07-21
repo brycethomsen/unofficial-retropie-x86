@@ -15,4 +15,4 @@
     ./setup.sh > setup.log 2> /dev/null
 
   script:
-    - ./build.sh > build.log 2> /dev/null
+    - ./build.sh 2> /dev/null
