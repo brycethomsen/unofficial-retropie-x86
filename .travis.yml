@@ -4,6 +4,11 @@
   notifications:
     email: false
 
+  branches:
+    only:
+    - master
+    - ci
+
   before_install:
     ./setup.sh
 
