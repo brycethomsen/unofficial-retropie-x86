@@ -1,0 +1,11 @@
+---
+  sudo: required
+
+  notifications:
+    email: false
+
+  before_install:
+    ./setup.sh
+
+  script:
+    - ./build.sh
