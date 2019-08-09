@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh '''
 
-pwd; docker run -it --privileged -v `pwd`:/retro -w="/retro" debian ./build.sh'''
+pwd; docker run --rm  --privileged -v `pwd`:/retro -w="/retro" debian ./build.sh'''
       }
     }
   }
