@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''
 
-pwd; docker run --rm  --privileged -v `pwd`:/retro -w="/retro" debian ./build.sh'''
+pwd; docker run --rm  --privileged -v `pwd`:/retro -w="/retro" debian ls'''
       }
     }
   }
